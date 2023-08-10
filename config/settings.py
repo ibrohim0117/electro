@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'apps',
     'product',
     #install apps
@@ -127,7 +128,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR / 'static')]
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR / 'media')
-SITE_ID = 2
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -143,8 +144,8 @@ AUTHENTICATION_BACKENDS = (
 
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
 )
+SITE_ID = 1
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {

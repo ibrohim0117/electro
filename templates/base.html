@@ -76,9 +76,9 @@
                 <div class="col-md-6">
                     <div class="header-search">
                         <form method="post" action="{% url 'index' %}">{% csrf_token %}
-                            <select class="input-select">
-                                {% for i in product %}
-                                <option value="1">{{ i.title }}</option>
+                            <select class="input-select" name="category">
+                                {% for i in category %}
+                                <option value="{{ i.id }}">{{ i.title }}</option>
                                 {% endfor %}
                             </select>
                             <input class="input" name="search" placeholder="Search here">

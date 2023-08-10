@@ -7,26 +7,6 @@ from apps.forms import RegisterForm, LoginForm
 from apps.models import User
 
 
-class IndexView(TemplateView):
-    template_name = 'index.html'
-
-
-class AddProductView(TemplateView):
-    template_name = 'add_product.html'
-
-
-class BlankView(TemplateView):
-    template_name = 'blank.html'
-
-
-class CheckOutView(TemplateView):
-    template_name = 'checkout.html'
-
-
-class ProductView(TemplateView):
-    template_name = 'product.html'
-
-
 class SignInView(LoginView):
     form_class = LoginForm
     template_name = 'sign_in.html'
@@ -40,7 +20,6 @@ class SignUpView(CreateView):
     success_url = reverse_lazy('sign_in')
 
 
-class StoreView(TemplateView):
-    template_name = 'store.html'
+
 
 
